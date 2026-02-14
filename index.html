@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Valentine 💖</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ffdde1, #ee9ca7);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #questionScreen {
+            margin-top: 150px;
+        }
+
+        h1 {
+            color: #d63384;
+            font-size: 30px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            margin: 15px;
+            transition: 0.3s;
+        }
+
+        #yesBtn {
+            background-color: #ff4d6d;
+            color: white;
+        }
+
+        #yesBtn:hover {
+            transform: scale(1.1);
+        }
+
+        #noBtn {
+            background-color: #6c757d;
+            color: white;
+            position: absolute;
+        }
+
+        #loveMessage {
+            display: none;
+            padding: 60px;
+            font-size: 20px;
+            color: #800040;
+            max-width: 800px;
+            margin: auto;
+            margin-top: 40px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        #loveMessage img {
+            max-width: 400px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(255,0,100,0.5);
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+
+<div id="questionScreen">
+    <h1>Will you be my valentine my bunny? 💘</h1>
+    <button id="yesBtn" onclick="showLove()">Yes 💖</button>
+    <button id="noBtn" onmouseover="moveButton()">No 😜</button>
+</div>
+
+<div id="loveMessage">
+    <img src="us.jpg" alt="Us ❤️">
+    <p>
+        Thank you my love for saying yes today and on everyday we have met especially the day you said yes to be my husband 💞<br><br>
+
+        I'm so so sorry for ruining your mood in the morning.<br>
+
+        I know you love me a lot and yes you do put efforts every time. It was maybe because it's been a month since we have seen each other and I wanted an essence of your touch or maybe your smell because I miss you so much. Please don’t be mad — it's just your wife wanting your love 🥺💖<br><br>
+
+        And remember I love you too — to the moon and back 🌙✨<br><br>
+
+        Can't wait to meet you and my Sheroo in summers 🥹💖<br><br>
+
+        Lots of love and kisses 💋💋
+    </p>
+</div>
+
+<script>
+function showLove() {
+    document.getElementById("questionScreen").style.display = "none";
+    document.getElementById("loveMessage").style.display = "block";
+}
+
+function moveButton() {
+    const button = document.getElementById("noBtn");
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    button.style.left = x + "px";
+    button.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
